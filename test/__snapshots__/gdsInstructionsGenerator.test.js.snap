@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gdsInstructionsGenerator generates expected instructions 1`] = `
+"{
+		type: \\"Script\\",
+		instructions: [
+			{
+		type: \\"Dialog\\",
+		execute: (_scriptScope) => {
+			_scriptScope.dialog += \\"\\\\r\\\\n\\\\r\\\\n\\";
+		}
+	},
+{
+		type: \\"Dialog\\",
+		execute: (_scriptScope) => {
+			_scriptScope.dialog += \\"\\\\r\\\\n\\\\r\\\\nHere is the story text.\\\\r\\\\n\\\\r\\\\nDown bellow is js code:\\\\r\\\\n\\";
+		}
+	},
+{
+		type: \\"JSExpression\\",
+		execute: (_scriptScope) => {
+			const test = {
+    test: \\"{{}}\\"
+  };
+  const test2 = \\"}}\\";
+  const test3 = \`\${test ? ({}) : '{\\"}}\\"}'}\`;
+		}
+	},
+{
+		type: \\"Dialog\\",
+		execute: (_scriptScope) => {
+			_scriptScope.dialog += \\"\\\\r\\\\n\\\\r\\\\n123\\";
+		}
+	},
+{
+		type: \\"JSExpression\\",
+		execute: (_scriptScope) => {
+			#asd \\"test\\"
+		}
+	},
+{
+		type: \\"Dialog\\",
+		execute: (_scriptScope) => {
+			_scriptScope.dialog += \\"\\\\r\\\\n1231\\\\r\\\\n\\";
+		}
+	}
+		]
+	}"
+`;

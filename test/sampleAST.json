@@ -1,0 +1,64 @@
+{
+  "type": "Script",
+  "body": [
+    {
+      "type": "Command",
+      "cmdType": "EachBlock",
+      "param": "\"test each\"",
+      "block": [
+        {
+          "type": "Dialog",
+          "text": "\r\ntest\r\n"
+        }
+      ]
+    },
+    {
+      "type": "Dialog",
+      "text": "\r\n\r\n"
+    },
+    {
+      "type": "Command",
+      "cmdType": "IfBlock",
+      "chain": [
+        {
+          "type": "Command",
+          "cmdType": "IfChainLink",
+          "condition": "\"TEST\"",
+          "block": []
+        },
+        {
+          "type": "Command",
+          "cmdType": "IfChainLink",
+          "condition": "\"blah\"",
+          "block": []
+        },
+        {
+          "type": "Command",
+          "cmdType": "IfChainLink",
+          "condition": null,
+          "block": []
+        }
+      ]
+    },
+    {
+      "type": "Dialog",
+      "text": "\r\n\r\nHere is the story text.\r\n\r\nDown bellow is js code:\r\n"
+    },
+    {
+      "type": "JSExpression",
+      "js": "const test = {\r\n    test: \"{{}}\"\r\n  };\r\n  const test2 = \"}}\";\r\n  const test3 = `${test ? ({}) : '{\"}}\"}'}`;"
+    },
+    {
+      "type": "Dialog",
+      "text": "\r\n\r\n123"
+    },
+    {
+      "type": "JSExpression",
+      "js": "#asd \"test\""
+    },
+    {
+      "type": "Dialog",
+      "text": "\r\n1231\r\n"
+    }
+  ]
+}
