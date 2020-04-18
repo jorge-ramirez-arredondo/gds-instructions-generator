@@ -21,9 +21,11 @@ function gdsInstructionsGenerator(ast, options = {}) {
 	switch (format) {
 		case FORMATS.string: {
 			generate = generateScriptInstructions;
+			break;
 		}
 		case FORMATS.array: {
 			generate = flow(generateScriptInstructions, eval);
+			break;
 		}
 		default: {
 			throw new Error(`Invalid generation format "${format}".`);
